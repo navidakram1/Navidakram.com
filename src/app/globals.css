@@ -1,26 +1,94 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-primary: #0f1015;
+  --bg-secondary: #171821;
+  --bg-card: #1f202c;
+  --bg-card-hover: #262837;
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  --accent-blue: #0084ff;
+  --accent-cyan: #00d2ff;
+  --accent-glow: rgba(0, 132, 255, 0.35);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-highlight: rgba(0, 132, 255, 0.3);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.light-theme {
+  --bg-primary: #f0f2f5;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #9ca3af;
+  --accent-blue: #0066cc;
+  --accent-cyan: #0284c7;
+  --accent-glow: rgba(0, 102, 204, 0.2);
+  --border-color: rgba(0, 0, 0, 0.08);
+  --border-highlight: rgba(0, 102, 204, 0.4);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom glowing badge styling */
+.blue-badge {
+  background: linear-gradient(135deg, #0066cc 0%, #0099ff 100%);
+  color: #ffffff;
+}
+
+/* Glassmorphism panel */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2e3142;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-blue);
+}
+
+/* Glowing animation */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 15px var(--accent-glow);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(0, 210, 255, 0.5);
+  }
+}
+
+.glow-active {
+  animation: pulse-glow 3s infinite ease-in-out;
+}
+
+/* Masked hexagon / polygon image shapes */
+.avatar-cutout {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.hero-curve {
+  clip-path: ellipse(150% 100% at 50% 0%);
 }
