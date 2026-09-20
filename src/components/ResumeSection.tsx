@@ -122,26 +122,42 @@ export function ResumeSection() {
                 {/* Timeline Dot */}
                 <span className="absolute left-[7px] top-6 w-2.5 h-2.5 rounded-full bg-[#0084ff] shadow-[0_0_8px_#0084ff]" />
 
-                <div className="p-6 rounded-2xl bg-[#1d1f2c] border border-white/10 hover:border-[#0084ff]/40 transition-all duration-300">
-                  <div className="space-y-2">
-                    <span className="inline-block px-3 py-1 rounded-md border border-[#0084ff] text-[#0084ff] text-[11px] font-bold">
+                <div className="p-6 rounded-2xl bg-[#1d1f2c] border border-white/10 hover:border-[#0084ff]/40 transition-all duration-300 relative overflow-hidden">
+                  <div className="flex items-start justify-between gap-3 mb-3">
+                    <div className="flex items-center gap-3.5 min-w-0">
+                      {edu.image && (
+                        <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white/[0.03] border border-white/10 p-2 flex items-center justify-center flex-shrink-0 group-hover:border-[#0084ff]/40 group-hover:bg-[#0084ff]/5 transition-all shadow-inner">
+                          <Image
+                            src={edu.image}
+                            alt={edu.institution}
+                            fill
+                            className="object-contain p-1"
+                            unoptimized
+                          />
+                        </div>
+                      )}
+                      <div className="min-w-0">
+                        <h4 className="text-base sm:text-lg font-bold text-white leading-tight">
+                          {edu.institution}
+                        </h4>
+                        <p className="text-xs font-semibold text-gray-400 mt-1">
+                          {edu.location}
+                        </p>
+                      </div>
+                    </div>
+
+                    <span className="inline-flex items-center px-2.5 py-1 rounded-md border border-[#0084ff] text-[#0084ff] text-[11px] font-bold flex-shrink-0 whitespace-nowrap">
                       {edu.period}
                     </span>
+                  </div>
 
-                    <h4 className="text-lg font-bold text-white pt-1">
-                      {edu.institution}
-                    </h4>
-
-                    <p className="text-xs font-semibold text-gray-400">
-                      {edu.location}
-                    </p>
-
-                    <p className="text-xs sm:text-sm text-gray-300 pt-1">
+                  <div className="space-y-2 pt-2 border-t border-white/5">
+                    <p className="text-xs sm:text-sm text-gray-200 font-medium">
                       {edu.degree}
                     </p>
 
                     {edu.rankInfo && (
-                      <p className="text-xs text-gray-400 italic">
+                      <p className="text-xs text-gray-400 italic leading-relaxed">
                         {edu.rankInfo}
                       </p>
                     )}

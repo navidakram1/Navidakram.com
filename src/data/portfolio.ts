@@ -52,6 +52,7 @@ export interface EducationItem {
   degree: string;
   certificateUrl?: string;
   rankInfo?: string;
+  image?: string;
 }
 
 export interface ProjectItem {
@@ -118,18 +119,18 @@ export const portfolioData = {
     stripeGeneralUrl: "https://buy.stripe.com/cN2aHUf8Z3Ka6QMcNQ",
     googleKnowledgeUrl: "https://g.co/kgs/rYXxTf",
     rabbitGuyUrl: "https://rabbitguy.com/",
-    certificateUrl: "https://navidakram.com/wp-content/uploads/2023/02/6266dadd-27f1-4dd6-8ef0-37400d0e262c.png",
+    certificateUrl: "/images/certificates/certificate-hsc.png",
     heroImages: [
-      "https://navidakram.com/wp-content/uploads/2025/02/434724407_2933443146798509_2389628769491449782_n.jpg",
-      "https://navidakram.com/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-12-at-01.02.19_9c48cead-scaled-e1739322300550-1200x1127.jpg",
-      "https://navidakram.com/wp-content/uploads/2023/09/Firefly-Inpaint-20230619120849-1200x1468.jpg",
-      "https://navidakram.com/wp-content/uploads/2023/06/WhatsApp-Image-2023-06-19-at-12.30.07-e1687156471307.jpg"
+      "/images/profile/hero-1.jpg",
+      "/images/profile/hero-2.jpg",
+      "/images/profile/hero-3.jpg",
+      "/images/profile/hero-4.jpg"
     ],
-    heroBgImage: "https://navidakram.com/wp-content/uploads/2025/02/434724407_2933443146798509_2389628769491449782_n.jpg",
-    avatarImage: "https://navidakram.com/wp-content/uploads/2024/02/navidakram.com_-1200x1166.png",
-    mascotImage: "https://navidakram.com/wp-content/uploads/2024/02/navidakram.com_-1200x1166.png",
-    mascotGif: "https://navidakram.com/wp-content/uploads/2025/04/3.-no-BG.gif",
-    photoPortrait: "https://navidakram.com/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-12-at-01.02.19_9c48cead-scaled-e1739322300550-1200x1127.jpg",
+    heroBgImage: "/images/profile/hero-1.jpg",
+    avatarImage: "/images/profile/avatar.png",
+    mascotImage: "/images/profile/avatar.png",
+    mascotGif: "/images/brand/rabbit-mascot.gif",
+    photoPortrait: "/images/profile/hero-2.jpg",
     socialLinks: [
       { name: "Facebook", icon: "facebook", url: "https://facebook.com" },
       { name: "Instagram", icon: "instagram", url: "https://instagram.com" },
@@ -145,20 +146,20 @@ export const portfolioData = {
 
   skillsIcons: [
     { name: "React", icon: "⚛️", color: "#61dafb" },
+    { name: "Next.js", icon: "▲", color: "#ffffff" },
+    { name: "TypeScript", icon: "TS", color: "#3178c6" },
+    { name: "Node.js", icon: "🟢", color: "#339933" },
+    { name: "Python", icon: "🐍", color: "#3776ab" },
     { name: "PHP", icon: "🐘", color: "#777bb4" },
     { name: "Java", icon: "☕", color: "#f89820" },
-    { name: "Python", icon: "🐍", color: "#3776ab" },
     { name: "SQL", icon: "🗄️", color: "#00758f" },
-    { name: "GitLab", icon: "🦊", color: "#fc6d26" },
-    { name: "CSS3", icon: "🎨", color: "#264de4" },
-    { name: "Node.js", icon: "🟢", color: "#339933" },
-    { name: "HTML5", icon: "📄", color: "#e34f26" },
     { name: "Docker", icon: "🐳", color: "#2496ed" },
     { name: "AWS", icon: "☁️", color: "#ff9900" },
     { name: "Firebase", icon: "🔥", color: "#ffca28" },
     { name: "Android App", icon: "📱", color: "#3ddc84" },
     { name: "GitHub", icon: "🐙", color: "#ffffff" },
-    { name: "Chess", icon: "♟️", color: "#e2e8f0" },
+    { name: "GitLab", icon: "🦊", color: "#fc6d26" },
+    { name: "CSS3", icon: "🎨", color: "#264de4" },
     { name: "WordPress", icon: "📝", color: "#21759b" }
   ],
 
@@ -224,29 +225,29 @@ export const portfolioData = {
       role: "Partnerships Manager",
       company: "Envato",
       comment: "We are enjoying working with you. Best wishes to you and your continuous great work.",
-      avatar: "https://navidakram.com/wp-content/uploads/2022/09/1537517792231-92x92-1.jpg"
+      avatar: "/images/testimonials/testimonial-1.jpg"
     },
     {
       name: "Sam McCraw",
       role: "Partnerships Manager",
       company: "placeit.net",
       comment: "Great communication, provided everything needed, they are kind and a great influencer overall. A pleasure to work with. Thank you!",
-      avatar: "https://navidakram.com/wp-content/uploads/2022/09/images-92x92-1.jpg"
+      avatar: "/images/testimonials/testimonial-2.jpg"
     },
     {
       name: "Andrew Wang",
       role: "Director",
       company: "Maximfile",
       comment: "I would recommend them as they work hard and do nice work, always making sure deliverables meet quality standards.",
-      avatar: "https://navidakram.com/wp-content/uploads/2022/09/ScreenShot_20220830141526-184x184.png"
+      avatar: "/images/testimonials/testimonial-3.png"
     }
   ],
 
   clients: [
-    { name: "Upwork", logo: "https://navidakram.com/wp-content/uploads/2022/07/brand2_w-184x62.png" },
-    { name: "Envato", logo: "https://navidakram.com/wp-content/uploads/2022/07/brand1_w-184x62.png" },
-    { name: "Fiverr", logo: "https://navidakram.com/wp-content/uploads/2022/07/brand3_w-184x62.png" },
-    { name: "Freelancer", logo: "https://navidakram.com/wp-content/uploads/2025/04/brand1_w.png" }
+    { name: "Upwork", logo: "/images/clients/upwork.svg" },
+    { name: "Fiverr", logo: "/images/clients/fiverr.svg" },
+    { name: "Envato", logo: "/images/clients/envato.svg" },
+    { name: "Freelancer", logo: "/images/clients/freelancer.svg" }
   ],
 
   funFacts: [
@@ -338,7 +339,7 @@ export const portfolioData = {
       company: "Fast Rabbit Ltd. (Rabbitguy.com)",
       role: "Owner, Full-Stack Developer & Operations Manager",
       description: "UK-registered digital service agency (#14561616). Delivered Laravel SaaS platforms, motion-animated websites, e-commerce solutions, and digital consultancy. Achieved 40% annual growth ($30k+ in sales across 125+ projects with a 5-person team) and 22,000+ Facebook audience.",
-      logo: "https://navidakram.com/wp-content/uploads/2025/04/3.-no-BG.gif",
+      logo: "/images/brand/rabbit-mascot.gif",
       websiteUrl: "https://rabbitguy.com/",
       highlights: ["UK Registered (#14561616)", "$30k+ Sales", "125+ Projects", "40% Growth"]
     },
@@ -354,7 +355,7 @@ export const portfolioData = {
       company: "Fiverr.com",
       role: "Level 2 Top Seller Freelancer",
       description: "Completed 1,350+ orders across 3 accounts with 1,280+ five-star reviews and an exceptional 4.9-star rating delivering top-tier web development, e-commerce, and design solutions.",
-      logo: "https://navidakram.com/wp-content/uploads/2025/04/fiverr-logo.png",
+      logo: "/images/experience/fiverr-logo.svg",
       highlights: ["Level 2 Top Seller", "1,350+ Orders", "1,280+ Reviews", "4.9 Rating"]
     },
     {
@@ -362,6 +363,7 @@ export const portfolioData = {
       company: "Envato Inc. (Elements.envato.com)",
       role: "Tech Influencer Marketer (Contract)",
       description: "Secured 30 tech influencers driving $20,000 in campaign revenue during contract period. Collaborated on digital asset promotions, creator partnerships, and web template marketing.",
+      logo: "/images/clients/envato.svg",
       highlights: ["30 Influencers Onboarded", "$20,000 Campaign Revenue"]
     },
     {
@@ -379,6 +381,7 @@ export const portfolioData = {
       institution: "Griffith College",
       location: "Cork, Ireland",
       degree: "BSc (Hons) in Computing Science",
+      image: "/images/institutes/griffith-college.svg",
       rankInfo: "Modules: Web Dev, Systems Analysis, Cloud Computing, AI, Cyber Security, Data Analytics, Networking"
     },
     {
@@ -386,6 +389,7 @@ export const portfolioData = {
       institution: "Milestone College",
       location: "Dhaka, Bangladesh",
       degree: "Higher Secondary Certificate (HSC)",
+      image: "/images/institutes/milestone-college.svg",
       rankInfo: "Perfect Academic Standing — GPA: 5.00 / 5.00",
       certificateUrl: "https://eboardresults.com/v2/home"
     },
@@ -394,6 +398,7 @@ export const portfolioData = {
       institution: "Mohammadpur Govt. High School",
       location: "Dhaka, Bangladesh",
       degree: "Secondary School Certificate (SSC)",
+      image: "/images/institutes/mohammadpur-govt-high-school.svg",
       rankInfo: "One of the oldest renowned public institutions in Dhaka",
       certificateUrl: "https://eboardresults.com/v2/home"
     }
@@ -405,7 +410,7 @@ export const portfolioData = {
       title: "Cryptocurrency Dashboard Application",
       category: "Content",
       type: "Web Application",
-      image: "https://navidakram.com/wp-content/uploads/2020/04/work-r2.jpg",
+      image: "/images/projects/crypto-app.jpg",
       link: "https://navidakram.com/portfolio-archive/cryptocurrency-dashboard-app/"
     },
     {
@@ -413,7 +418,7 @@ export const portfolioData = {
       title: "Speedcurve Performance Analytics Tool",
       category: "Video",
       type: "Analytics & Monitoring",
-      image: "https://navidakram.com/wp-content/uploads/2020/04/work2-1.jpg",
+      image: "/images/projects/speedcurve.jpg",
       link: "https://vimeo.com/97102654",
       isVideo: true,
       videoUrl: "https://vimeo.com/97102654"
@@ -423,7 +428,7 @@ export const portfolioData = {
       title: "Mobile Smart City Application",
       category: "Gallery",
       type: "Mobile App",
-      image: "https://navidakram.com/wp-content/uploads/2020/04/work-r9.jpg",
+      image: "/images/projects/smart-city.jpg",
       link: "https://navidakram.com/portfolio-archive/mobile-smart-city-app/"
     },
     {
@@ -431,7 +436,7 @@ export const portfolioData = {
       title: "Analytics Dashboard Software Tool",
       category: "Content",
       type: "SaaS Software",
-      image: "https://navidakram.com/wp-content/uploads/2020/04/work-r4.jpg",
+      image: "/images/projects/analytics-tool.jpg",
       link: "https://navidakram.com/portfolio-archive/analytics-dashboard-software-tool/"
     },
     {
@@ -439,7 +444,7 @@ export const portfolioData = {
       title: "Investment Mobile Application",
       category: "Image",
       type: "FinTech App",
-      image: "https://navidakram.com/wp-content/uploads/2020/04/work-r8.jpg",
+      image: "/images/projects/investment-app.jpg",
       link: "https://navidakram.com/portfolio-archive/investment-mobile-application/"
     },
     {
@@ -447,7 +452,7 @@ export const portfolioData = {
       title: "Automation System Production",
       category: "Link",
       type: "System Automation",
-      image: "https://navidakram.com/wp-content/uploads/2020/04/work6-1.jpg",
+      image: "/images/projects/automation.jpg",
       link: "https://bslthemes.com"
     }
   ],
@@ -459,7 +464,7 @@ export const portfolioData = {
       date: "April 28, 2020",
       category: "Design & Code",
       snippet: "Creating a digital representation of a brand’s values, personality, and message through web design, user experience, and visual elements.",
-      image: "https://navidakram.com/wp-content/uploads/2020/04/news1.jpg",
+      image: "/images/articles/article-1.jpg",
       link: "https://navidakram.com/brand-identity-with-code/"
     },
     {
@@ -468,7 +473,7 @@ export const portfolioData = {
       date: "April 28, 2020",
       category: "Code & DevOps",
       snippet: "Servers, storage systems, networking equipment, and cooling systems. Crucial insights for ensuring reliability, performance, and scalability.",
-      image: "https://navidakram.com/wp-content/uploads/2020/04/work1-2.jpg",
+      image: "/images/articles/article-2.jpg",
       link: "https://navidakram.com/data-center-infrastructure/"
     },
     {
@@ -477,7 +482,7 @@ export const portfolioData = {
       date: "April 28, 2020",
       category: "Music & UI",
       snippet: "When designing a music player, it is important to consider user-friendly features such as intuitive navigation, audio visualization, and customization.",
-      image: "https://navidakram.com/wp-content/uploads/2020/04/blog3.jpg",
+      image: "/images/articles/article-3.jpg",
       link: "https://navidakram.com/music-player-design/"
     },
     {
@@ -495,7 +500,7 @@ export const portfolioData = {
       id: "lead-architect",
       role: "Lead Architect & Full-Stack",
       company: "Fast Rabbit Ltd.",
-      image: "https://navidakram.com/wp-content/uploads/2023/04/50824462_1202518959905424_3492638396898082816_n.jpg",
+      image: "/images/team/team-1.jpg",
       specialty: "Full-Stack & Cloud Architecture",
       badge: "Lead Dev"
     },
@@ -503,7 +508,7 @@ export const portfolioData = {
       id: "frontend-engineer",
       role: "Senior UI/UX & Frontend",
       company: "Fast Rabbit Ltd.",
-      image: "https://navidakram.com/wp-content/uploads/2023/04/avatar_v4vjcj6p8rr.jpg",
+      image: "/images/team/team-2.jpg",
       specialty: "Next.js, React, Design Systems",
       badge: "Frontend Lead"
     },
@@ -511,7 +516,7 @@ export const portfolioData = {
       id: "backend-engineer",
       role: "Backend & Systems Engineer",
       company: "Fast Rabbit Ltd.",
-      image: "https://navidakram.com/wp-content/uploads/2023/04/162138306_4131923796838377_980558034971635657_o-e1681200442808.jpg",
+      image: "/images/team/team-3.jpg",
       specialty: "Java, Python, PostgreSQL, AWS",
       badge: "Backend Lead"
     },
@@ -519,7 +524,7 @@ export const portfolioData = {
       id: "mobile-specialist",
       role: "Mobile App Specialist",
       company: "Fast Rabbit Ltd.",
-      image: "https://navidakram.com/wp-content/uploads/2023/04/272813225_659424895295694_8955442310053691584_n-e1681200604877.jpg",
+      image: "/images/team/team-4.jpg",
       specialty: "Android, iOS, React Native",
       badge: "Mobile Lead"
     }

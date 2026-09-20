@@ -41,6 +41,7 @@ export function ProjectsSection() {
           return (
             <button
               key={category}
+              suppressHydrationWarning
               onClick={() => setSelectedCategory(category)}
               className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 ${
                 isSelected

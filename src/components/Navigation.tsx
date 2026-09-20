@@ -48,6 +48,7 @@ export function Navigation({ activeTab, setActiveTab }: NavigationProps) {
             return (
               <button
                 key={tab.id}
+                suppressHydrationWarning
                 onClick={() => setActiveTab(tab.id)}
                 className={`group flex flex-col items-center justify-center w-full py-2.5 rounded-2xl transition-all duration-300 relative ${
                   isActive
@@ -108,6 +109,7 @@ export function Navigation({ activeTab, setActiveTab }: NavigationProps) {
           {/* Action buttons (Menu) */}
           <div className="flex items-center gap-2">
             <button
+              suppressHydrationWarning
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle Menu"
               className="p-2 rounded-xl text-gray-300 hover:text-white hover:bg-white/5 transition"
@@ -157,6 +159,7 @@ export function Navigation({ activeTab, setActiveTab }: NavigationProps) {
               return (
                 <button
                   key={tab.id}
+                  suppressHydrationWarning
                   onClick={() => {
                     setActiveTab(tab.id);
                     setMobileMenuOpen(false);

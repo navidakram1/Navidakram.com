@@ -13,6 +13,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://navidakram.com"),
   title: "Sk Navid Akram - Web Developer & Software Engineer | navidakram.com",
   description: "Official portfolio of Sk Navid Akram. Full-stack developer specializing in Java, React, Python, mobile apps, and SaaS businesses. Based in Cork, Ireland.",
   keywords: [
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
     siteName: "navidakram.com",
     images: [
       {
-        url: "https://navidakram.com/wp-content/uploads/2025/02/434724407_2933443146798509_2389628769491449782_n.jpg",
+        url: "/images/profile/hero-1.jpg",
         width: 1200,
         height: 630,
         alt: "Sk Navid Akram",
@@ -48,12 +49,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Sk Navid Akram - Web Developer",
     description: "Full-Stack Engineer & SaaS Owner. Specializing in React, Java, and Mobile Apps.",
-    images: ["https://navidakram.com/wp-content/uploads/2025/02/434724407_2933443146798509_2389628769491449782_n.jpg"],
+    images: ["/images/profile/hero-1.jpg"],
   },
   icons: {
-    icon: "https://navidakram.com/wp-content/uploads/2024/02/navidakram.com_-1200x1166.png",
-    shortcut: "https://navidakram.com/wp-content/uploads/2024/02/navidakram.com_-1200x1166.png",
-    apple: "https://navidakram.com/wp-content/uploads/2024/02/navidakram.com_-1200x1166.png",
+    icon: "/images/profile/avatar.png",
+    shortcut: "/images/profile/avatar.png",
+    apple: "/images/profile/avatar.png",
   },
 };
 
@@ -64,7 +65,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.className} antialiased`} suppressHydrationWarning>
         <ThemeProvider>
           {children}
         </ThemeProvider>

@@ -67,6 +67,7 @@ export function ContactSection() {
             </span>
             <div className="flex items-center gap-2">
               <button
+                suppressHydrationWarning
                 onClick={() => handleCopy(portfolioData.personal.phone, "phone")}
                 title="Copy phone"
                 className="p-2 rounded-xl bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white transition"
@@ -105,6 +106,7 @@ export function ContactSection() {
             </span>
             <div className="flex items-center gap-2">
               <button
+                suppressHydrationWarning
                 onClick={() => handleCopy(portfolioData.personal.email, "email")}
                 title="Copy email"
                 className="p-2 rounded-xl bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white transition"

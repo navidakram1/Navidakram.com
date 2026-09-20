@@ -92,6 +92,7 @@ export function ProfileCard() {
                 src={portfolioData.personal.avatarImage}
                 alt={portfolioData.personal.name}
                 fill
+                priority
                 className="object-cover scale-110 p-0.5"
                 unoptimized
               />

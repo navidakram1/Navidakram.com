@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <radialGradient id="mg-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#161722" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <rect width="100" height="100" rx="20" fill="#181a26"/>
+  <rect width="100" height="100" rx="20" fill="url(#mg-glow)"/>
+  <rect x="1.5" y="1.5" width="97" height="97" rx="18.5" stroke="#10b981" stroke-width="2" stroke-opacity="0.4"/>
+  
+  <!-- School Shield Emblem -->
+  <path d="M50 14 C65 14 74 16 76 22 C76 48 68 64 50 72 C32 64 24 48 24 22 C26 16 35 14 50 14 Z" fill="#0f291e" stroke="#34d399" stroke-width="2" stroke-linejoin="round"/>
+  
+  <!-- Open Book inside shield -->
+  <path d="M50 38 C44 36 37 36 34 38 L34 26 C37 24 44 24 50 26 C56 24 63 24 66 26 L66 38 C63 36 56 36 50 38 Z" fill="#064e3b" stroke="#ffffff" stroke-width="1.4"/>
+  
+  <!-- Lab Flask (Science) -->
+  <path d="M38 45 L42 45 L42 48 L46 55 C47 57 45 59 43 59 L37 59 C35 59 33 57 34 55 L38 48 Z" fill="#34d399" fill-opacity="0.4" stroke="#ffffff" stroke-width="1.2"/>
+  
+  <!-- Sports (Hockey stick & ball) -->
+  <path d="M54 45 L62 55 C64 57 66 57 67 55" stroke="#f87171" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="56" cy="56" r="2" fill="#fbbf24"/>
+  
+  <!-- Year 1967 -->
+  <text x="50" y="66" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="6" font-weight="700" text-anchor="middle">ESTD 1967</text>
+  
+  <!-- Bottom Text Label -->
+  <rect x="15" y="78" width="70" height="14" rx="4" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-opacity="0.4"/>
+  <text x="50" y="88" fill="#ffffff" font-family="system-ui, sans-serif" font-size="7" font-weight="800" text-anchor="middle" letter-spacing="0.5">MGHS DHAKA</text>
+</svg>
