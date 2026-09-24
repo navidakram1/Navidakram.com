@@ -22,14 +22,16 @@ import {
   Users,
   Sparkles,
   Gamepad2,
-  Crown
+  Crown,
+  GraduationCap
 } from "lucide-react";
 import { portfolioData } from "@/data/portfolio";
 import { VerifiedBadge } from "@/components/ui/verified-badge";
 import { HandwritingText } from "@/components/ui/handwriting-text";
-import { TechIcon } from "@/components/TechIcons";
 import { SkillsMarquee } from "@/components/ui/skills-marquee";
 import { GamingSection } from "@/components/ui/gaming-section";
+import { MusicPlayerCard } from "@/components/ui/music-player-card";
+import { AnimatedStatsSection } from "@/components/ui/animated-stats";
 
 import { SectionTitle } from "@/components/ui/section-title";
 import { User } from "lucide-react";
@@ -113,24 +115,6 @@ export function AboutSection() {
         {/* 21st.dev Infinite Scrolling Skills Marquee Carousel */}
         <div className="rounded-2xl bg-[#12131d] border border-white/10 p-3 sm:p-4 overflow-hidden shadow-inner">
           <SkillsMarquee skills={portfolioData.skillsIcons} speed={32} direction="left" />
-        </div>
-
-        {/* Interactive Skills Grid */}
-        <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-3">
-          {portfolioData.skillsIcons.map((skill) => (
-            <div
-              key={skill.name}
-              className="group relative flex flex-col items-center justify-center p-3.5 rounded-2xl bg-[#161722] hover:bg-[#0084ff]/15 border border-white/10 hover:border-[#0084ff]/60 transition-all duration-300 cursor-pointer hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(0,132,255,0.25)]"
-              title={skill.name}
-            >
-              <div className="h-9 flex items-center justify-center mb-1.5 group-hover:scale-115 transition-transform duration-200">
-                <TechIcon name={skill.name} size={28} />
-              </div>
-              <span className="text-[11px] font-semibold text-gray-300 text-center leading-tight w-full group-hover:text-white transition-colors">
-                {skill.name}
-              </span>
-            </div>
-          ))}
         </div>
       </div>
 
@@ -365,14 +349,25 @@ export function AboutSection() {
         </div>
       </div>
 
-      {/* ================= FUN FACTS: GAMING ================= */}
+      {/* ================= FUN FACTS & PASSIONS ================= */}
       <div className="space-y-6 pt-4">
         <h3 className="text-xl sm:text-2xl font-extrabold text-white flex items-center gap-2">
           <span className="w-2 h-6 bg-[#0084ff] rounded-full" />
-          Fun Facts: Gaming
+          Fun Facts & Passions
         </h3>
 
-        <GamingSection />
+        {/* 21st.dev Animated Stats Cards & Review Summary */}
+        <AnimatedStatsSection />
+
+        {/* Clean Gaming Cards */}
+        <div className="pt-2">
+          <GamingSection />
+        </div>
+
+        {/* Music Playlist Player Card */}
+        <div className="pt-2">
+          <MusicPlayerCard playlistUrl={portfolioData.personal.musicPlaylistUrl} />
+        </div>
       </div>
 
       {/* ================= PAYMENT & STRIPE DIRECT CHECKOUT BANNER ================= */}

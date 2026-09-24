@@ -133,6 +133,7 @@ export const portfolioData = {
     stripeGeneralUrl: "https://buy.stripe.com/cN2aHUf8Z3Ka6QMcNQ",
     googleKnowledgeUrl: "https://g.co/kgs/rYXxTf",
     rabbitGuyUrl: "https://rabbitguy.com/",
+    musicPlaylistUrl: "https://www.youtube.com/playlist?list=PLWdKCECfzQTJvaUMgseAgRgfQg9_me6L4",
     certificateUrl: "/images/certificates/certificate-hsc.png",
     heroImages: [
       "/images/profile/hero-1.jpg",
@@ -265,10 +266,10 @@ export const portfolioData = {
   ],
 
   funFacts: [
-    { count: "1,850+", label: "Chess ELO Peak", icon: "Trophy" },
-    { count: "8,200+", label: "Clash Royale Trophies", icon: "Crown" },
-    { count: "1,350+", label: "Projects Delivered", icon: "CheckSquare" },
-    { count: "5,000+", label: "Tactical Gaming Hours", icon: "Gamepad2" }
+    { count: "1,350+", label: "Total Projects Delivered", icon: "CheckSquare" },
+    { count: "45+", label: "Students & Mentees Taught", icon: "GraduationCap" },
+    { count: "1,280+", label: "5-Star Client Reviews", icon: "Trophy" },
+    { count: "22K+", label: "Global Reach & Followers", icon: "Globe" }
   ],
 
   gaming: [
@@ -411,8 +412,7 @@ export const portfolioData = {
     { name: "English", percentage: 95 },
     { name: "Bangla", percentage: 100 },
     { name: "Hindi", percentage: 75 },
-    { name: "Urdu", percentage: 75 },
-    { name: "French", percentage: 50 }
+    { name: "Urdu", percentage: 75 }
   ],
 
   platforms: [
