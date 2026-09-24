@@ -8,9 +8,11 @@ import {
   Layers, 
   Image as ImageIcon, 
   Link as LinkIcon, 
-  FileText 
+  FileText,
+  Briefcase
 } from "lucide-react";
 import { portfolioData, ProjectItem } from "@/data/portfolio";
+import { SectionTitle } from "@/components/ui/section-title";
 
 const categories = ["All", "Video", "Link", "Image", "Gallery", "Content"] as const;
 
@@ -25,14 +27,13 @@ export function ProjectsSection() {
   return (
     <div className="space-y-10 animate-in fade-in duration-300">
       {/* ================= SECTION HEADER ================= */}
-      <div className="flex items-center gap-3 border-b border-white/10 pb-5">
-        <div className="relative flex items-center justify-center w-10 h-10 rounded-full bg-[#0084ff]/20 border border-[#0084ff]/40 text-[#00d2ff] font-black text-xl shadow-[0_0_15px_rgba(0,132,255,0.4)]">
-          P
-        </div>
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-          ortfolio & Works
-        </h2>
-      </div>
+      <SectionTitle
+        title="Portfolio & Works"
+        highlightWord="Portfolio"
+        icon={Briefcase}
+        subtitlePrefix="showcase:"
+        animatedWords={["Rabbitguy.com", "Mobile Applications.", "Web Platforms.", "SaaS Solutions."]}
+      />
 
       {/* ================= CATEGORY FILTER TABS ================= */}
       <div className="flex items-center gap-2 flex-wrap pb-2">

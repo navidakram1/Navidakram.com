@@ -16,18 +16,20 @@ import {
 } from "lucide-react";
 import { portfolioData } from "@/data/portfolio";
 
+import { SectionTitle } from "@/components/ui/section-title";
+import { FileText } from "lucide-react";
+
 export function ResumeSection() {
   return (
     <div className="space-y-12 animate-in fade-in duration-300">
       {/* ================= SECTION HEADER ================= */}
-      <div className="flex items-center gap-3 border-b border-white/10 pb-5">
-        <div className="relative flex items-center justify-center w-10 h-10 rounded-full bg-[#0084ff]/20 border border-[#0084ff]/40 text-[#0084ff] font-black text-xl shadow-[0_0_15px_rgba(0,132,255,0.4)]">
-          R
-        </div>
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-          esume
-        </h2>
-      </div>
+      <SectionTitle
+        title="Resume & Experience"
+        highlightWord="Resume"
+        icon={FileText}
+        subtitlePrefix="career:"
+        animatedWords={["8+ years in IT.", "Full-Stack Engineer.", "Java & React.", "Cork, Ireland."]}
+      />
 
       {/* ================= EXPERIENCE & EDUCATION COLUMNS ================= */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">

@@ -16,6 +16,8 @@ import {
 } from "lucide-react";
 import { portfolioData } from "@/data/portfolio";
 
+import { SectionTitle } from "@/components/ui/section-title";
+
 export function ContactSection() {
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);
@@ -34,14 +36,13 @@ export function ContactSection() {
   return (
     <div className="space-y-12 animate-in fade-in duration-300">
       {/* ================= SECTION HEADER ================= */}
-      <div className="flex items-center gap-3 border-b border-white/10 pb-5">
-        <div className="relative flex items-center justify-center w-10 h-10 rounded-full bg-[#0084ff]/20 border border-[#0084ff]/40 text-[#00d2ff] font-black text-xl shadow-[0_0_15px_rgba(0,132,255,0.4)]">
-          C
-        </div>
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-          ontact & Inquiries
-        </h2>
-      </div>
+      <SectionTitle
+        title="Contact & Inquiries"
+        highlightWord="Contact"
+        icon={Mail}
+        subtitlePrefix="status:"
+        animatedWords={["Available for Hire.", "Fast Reply 24/7.", "Let's Build Together.", "Cork, Ireland."]}
+      />
 
       {/* Main Direct Channels Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

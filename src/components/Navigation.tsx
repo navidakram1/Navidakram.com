@@ -22,6 +22,7 @@ import { useTheme } from "@/components/ThemeContext";
 export interface NavigationProps {
   activeTab: string;
   setActiveTab: (tab: string) => void;
+  onTabSelect?: (tabId: string) => void;
 }
 
 export const navTabs = [
@@ -35,7 +36,19 @@ export const navTabs = [
 /**
  * Desktop docked vertical navigation bar (attached to profile card on XL+ screens)
  */
-export function DesktopNavigation({ activeTab, setActiveTab }: NavigationProps) {
+export function DesktopNavigation({ activeTab, setActiveTab, onTabSelect }: NavigationProps) {
+  const handleTabClick = (tabId: string) => {
+    setActiveTab(tabId);
+    if (onTabSelect) {
+      onTabSelect(tabId);
+    } else {
+      const targetEl = document.getElementById(tabId);
+      if (targetEl) {
+        targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  };
+
   return (
     <aside className="hidden xl:flex flex-col items-center justify-center py-6 px-2.5 z-40 bg-[#1c1e2b]/95 backdrop-blur-xl rounded-[28px] border border-white/10 shadow-[0_15px_40px_rgba(0,0,0,0.6)] w-[72px] min-h-[440px] my-auto -mr-4 relative flex-shrink-0">
       {/* Blue Contour Trace Arc */}
@@ -50,7 +63,7 @@ export function DesktopNavigation({ activeTab, setActiveTab }: NavigationProps) 
             <button
               key={tab.id}
               suppressHydrationWarning
-              onClick={() => setActiveTab(tab.id)}
+              onClick={() => handleTabClick(tab.id)}
               className={`group flex flex-col items-center justify-center w-full py-2.5 rounded-2xl transition-all duration-300 relative ${
                 isActive
                   ? "text-[#0084ff]"
@@ -86,16 +99,20 @@ export function DesktopNavigation({ activeTab, setActiveTab }: NavigationProps) 
  * Mobile sticky header and 5-item horizontal navigation bar
  * Matching exact example: Top Name + Title + Theme + Menu, followed by 5 horizontal tabs
  */
-export function MobileNavigation({ activeTab, setActiveTab }: NavigationProps) {
+export function MobileNavigation({ activeTab, setActiveTab, onTabSelect }: NavigationProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
   const handleTabSelect = (tabId: string) => {
     setActiveTab(tabId);
     setMobileMenuOpen(false);
-    const contentEl = document.getElementById("content-panel");
-    if (contentEl) {
-      contentEl.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (onTabSelect) {
+      onTabSelect(tabId);
+    } else {
+      const targetEl = document.getElementById(tabId);
+      if (targetEl) {
+        targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     }
   };
 

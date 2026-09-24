@@ -4,19 +4,19 @@ import React from "react";
 import Image from "next/image";
 import { Calendar, ArrowRight, BookOpen } from "lucide-react";
 import { portfolioData, BlogPostItem } from "@/data/portfolio";
+import { SectionTitle } from "@/components/ui/section-title";
 
 export function BlogSection() {
   return (
     <div className="space-y-10 animate-in fade-in duration-300">
       {/* ================= SECTION HEADER ================= */}
-      <div className="flex items-center gap-3 border-b border-white/10 pb-5">
-        <div className="relative flex items-center justify-center w-10 h-10 rounded-full bg-[#0084ff]/20 border border-[#0084ff]/40 text-[#00d2ff] font-black text-xl shadow-[0_0_15px_rgba(0,132,255,0.4)]">
-          B
-        </div>
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-          log & Articles
-        </h2>
-      </div>
+      <SectionTitle
+        title="Blog & Articles"
+        highlightWord="Blog"
+        icon={BookOpen}
+        subtitlePrefix="writing:"
+        animatedWords={["Tech Insights.", "Full-Stack Dev.", "Tutorials & Guides.", "SaaS Growth."]}
+      />
 
       {/* ================= ARTICLES GRID ================= */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -28,30 +28,20 @@ import { HandwritingText } from "@/components/ui/handwriting-text";
 import { TechIcon } from "@/components/TechIcons";
 import { SkillsMarquee } from "@/components/ui/skills-marquee";
 
+import { SectionTitle } from "@/components/ui/section-title";
+import { User } from "lucide-react";
+
 export function AboutSection() {
   return (
     <div className="space-y-12 animate-in fade-in duration-300">
       {/* ================= SECTION HEADER ================= */}
-      <div className="flex items-center justify-between border-b border-white/10 pb-5">
-        <div className="flex items-center gap-3">
-          <div className="relative flex items-center justify-center w-10 h-10 rounded-full bg-[#0084ff]/20 border border-[#0084ff]/40 text-[#0084ff] font-black text-xl shadow-[0_0_15px_rgba(0,132,255,0.4)]">
-            A
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-            bout Me
-          </h2>
-        </div>
-
-        {/* Handwriting Sub-Badge */}
-        <div className="hidden sm:flex items-center gap-1.5 text-xs text-gray-400 font-medium">
-          <span className="opacity-60">crafting:</span>
-          <HandwritingText
-            words={["clean code.", "pixel perfect UI.", "scalable apps.", "SaaS products."]}
-            className="text-[#00d2ff] font-bold"
-            height="1.3em"
-          />
-        </div>
-      </div>
+      <SectionTitle
+        title="About Me"
+        highlightWord="About"
+        icon={User}
+        subtitlePrefix="crafting:"
+        animatedWords={["clean code.", "pixel-perfect UI.", "scalable apps.", "SaaS products."]}
+      />
 
       {/* ================= INTRO / BIO NARRATIVE ================= */}
       <div className="space-y-5 text-gray-300 leading-relaxed text-sm sm:text-base">
