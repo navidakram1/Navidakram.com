@@ -59,11 +59,11 @@ export function ProfileCard() {
   const socialRow2 = portfolioData.personal.socialLinks.slice(5);
 
   return (
-    <div className="w-full max-w-[400px] bg-[#1e202d] rounded-[32px] border border-white/10 shadow-[0_25px_60px_rgba(0,0,0,0.6)] flex flex-col flex-shrink-0 transition-all duration-300 relative z-20 overflow-hidden">
+    <div className="w-full max-w-[420px] xl:max-w-[400px] mx-auto bg-[#1e202d] rounded-[28px] sm:rounded-[32px] border border-white/10 shadow-[0_25px_60px_rgba(0,0,0,0.6)] flex flex-col flex-shrink-0 transition-all duration-300 relative z-20 overflow-hidden">
       {/* Top Banner / Cover Slideshow Photo Section */}
       <div className="relative w-full">
         {/* Cover Photo Banner - Full View */}
-        <div className="relative w-full h-[320px] sm:h-[350px] overflow-hidden bg-[#181a26]">
+        <div className="relative w-full h-[280px] sm:h-[350px] overflow-hidden bg-[#181a26]">
           {heroImages.map((imgSrc, idx) => (
             <div
               key={idx}
@@ -160,35 +160,35 @@ export function ProfileCard() {
       </div>
 
       {/* Bottom Action Bar */}
-      <div className="grid grid-cols-3 border-t border-white/10 bg-[#161723] divide-x divide-white/10 text-[11px] font-bold uppercase tracking-wider text-center">
+      <div className="grid grid-cols-3 border-t border-white/10 bg-[#161723] divide-x divide-white/10 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-center">
         <a
           href={portfolioData.personal.cvUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="py-4 px-2 text-gray-300 hover:text-white hover:bg-white/5 flex items-center justify-center gap-1.5 transition-colors group"
+          className="py-3.5 sm:py-4 px-1.5 sm:px-2 text-gray-300 hover:text-white hover:bg-white/5 flex items-center justify-center gap-1 sm:gap-1.5 transition-colors group"
         >
-          <span>DOWNLOAD CV</span>
-          <Download size={14} className="text-[#0084ff] group-hover:scale-110 transition-transform" />
+          <span className="truncate">DOWNLOAD CV</span>
+          <Download size={13} className="text-[#0084ff] group-hover:scale-110 transition-transform flex-shrink-0" />
         </a>
 
         <a
           href={portfolioData.personal.whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="py-4 px-2 text-gray-300 hover:text-white hover:bg-white/5 flex items-center justify-center gap-1.5 transition-colors group"
+          className="py-3.5 sm:py-4 px-1.5 sm:px-2 text-gray-300 hover:text-white hover:bg-white/5 flex items-center justify-center gap-1 sm:gap-1.5 transition-colors group"
         >
-          <span>CONTACT ME</span>
-          <Phone size={14} className="text-[#0084ff] group-hover:scale-110 transition-transform" />
+          <span className="truncate">CONTACT ME</span>
+          <Phone size={13} className="text-[#0084ff] group-hover:scale-110 transition-transform flex-shrink-0" />
         </a>
 
         <a
           href={portfolioData.personal.stripeGeneralUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="py-4 px-2 text-gray-300 hover:text-white hover:bg-[#0084ff]/10 flex items-center justify-center gap-1.5 transition-colors group"
+          className="py-3.5 sm:py-4 px-1.5 sm:px-2 text-gray-300 hover:text-white hover:bg-[#0084ff]/10 flex items-center justify-center gap-1 sm:gap-1.5 transition-colors group"
         >
-          <span>PAYMENT</span>
-          <DollarSign size={14} className="text-[#0084ff] group-hover:scale-110 transition-transform" />
+          <span className="truncate">PAYMENT</span>
+          <DollarSign size={13} className="text-[#0084ff] group-hover:scale-110 transition-transform flex-shrink-0" />
         </a>
       </div>
     </div>
