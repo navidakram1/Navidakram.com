@@ -97,6 +97,20 @@ export interface TeamMemberItem {
   linkedinUrl?: string;
 }
 
+export interface GamingItem {
+  id: string;
+  name: string;
+  genre: string;
+  tagline: string;
+  rank: string;
+  role: string;
+  platform: string;
+  image: string;
+  accentColor: string;
+  badge: string;
+  stats: { label: string; value: string }[];
+}
+
 export const portfolioData = {
   personal: {
     name: "Sk Navid Akram",
@@ -251,10 +265,98 @@ export const portfolioData = {
   ],
 
   funFacts: [
-    { count: "1,350+", label: "Orders Delivered", icon: "CheckSquare" },
-    { count: "1,280+", label: "5-Star Client Reviews", icon: "Trophy" },
-    { count: "45+", label: "Mentees Taught", icon: "Coffee" },
-    { count: "22K+", label: "Followers & Reach", icon: "Globe" }
+    { count: "1,850+", label: "Chess ELO Peak", icon: "Trophy" },
+    { count: "8,200+", label: "Clash Royale Trophies", icon: "Crown" },
+    { count: "1,350+", label: "Projects Delivered", icon: "CheckSquare" },
+    { count: "5,000+", label: "Tactical Gaming Hours", icon: "Gamepad2" }
+  ],
+
+  gaming: [
+    {
+      id: "pubg",
+      name: "PUBG: Battlegrounds",
+      genre: "Battle Royale / Tactical Shooter",
+      tagline: "Drop in, loot up, and survive till the final circle.",
+      rank: "Conqueror / Ace Tier",
+      role: "Assault & Sniper",
+      platform: "PC & Mobile",
+      image: "/images/gaming/pubg.jpg",
+      accentColor: "#f59e0b",
+      badge: "Chicken Dinner Specialist",
+      stats: [
+        { label: "Play Style", value: "Aggressive Rush" },
+        { label: "Favorite Weapon", value: "M416 + AWM" },
+        { label: "Survival Rate", value: "Top 2%" }
+      ]
+    },
+    {
+      id: "valorant",
+      name: "Valorant",
+      genre: "Tactical Hero Shooter (5v5)",
+      tagline: "Pixel-perfect crosshairs, fast reaction time, and tactical entry.",
+      rank: "Immortal / Diamond",
+      role: "Duelist & Initiator",
+      platform: "PC (Riot)",
+      image: "/images/gaming/valorant.jpg",
+      accentColor: "#00d2ff",
+      badge: "Clutch Master",
+      stats: [
+        { label: "Main Agent", value: "Jett / Reyna" },
+        { label: "Headshot Rate", value: "28.5%" },
+        { label: "Clutch Success", value: "High Impact" }
+      ]
+    },
+    {
+      id: "cod-warzone",
+      name: "Call of Duty: Warzone",
+      genre: "Fast-Paced Battle Royale",
+      tagline: "Verdansk veteran with crisp movement and long-range sniper accuracy.",
+      rank: "Top Tier Resurgence",
+      role: "Squad Leader & Pointman",
+      platform: "PC / Crossplay",
+      image: "/images/gaming/cod-warzone.jpg",
+      accentColor: "#10b981",
+      badge: "Verdansk Veteran",
+      stats: [
+        { label: "Favorite Loadout", value: "Kar98k + SMG" },
+        { label: "Mode", value: "Resurgence & Trios" },
+        { label: "KD Ratio", value: "3.2+ Competitive" }
+      ]
+    },
+    {
+      id: "clash-royale",
+      name: "Clash Royale",
+      genre: "Real-Time Strategy / Tower Defense",
+      tagline: "Strict elixir counting, counter-pushes, and 3-crown domination.",
+      rank: "Ultimate Champion (8K+)",
+      role: "Deck Builder & Strategist",
+      platform: "Mobile (iOS/Android)",
+      image: "/images/gaming/clash-royale.jpg",
+      accentColor: "#a855f7",
+      badge: "Arena Legend",
+      stats: [
+        { label: "Favorite Card", value: "P.E.K.K.A & Miner" },
+        { label: "Trophies", value: "8,200+ Peak" },
+        { label: "Archetype", value: "Bridge Spam / Control" }
+      ]
+    },
+    {
+      id: "chess",
+      name: "Chess (Chess.com)",
+      genre: "Classical & Rapid Strategy",
+      tagline: "Tactical calculation, pawn structure mastery, and endgame precision.",
+      rank: "1850+ Rating (Rapid/Blitz)",
+      role: "Positional & Tactical",
+      platform: "Chess.com / FIDE Rules",
+      image: "/images/gaming/chess.webp",
+      accentColor: "#38bdf8",
+      badge: "Tactical Mind",
+      stats: [
+        { label: "Favorite Opening", value: "Sicilian & Queen's Gambit" },
+        { label: "Peak Rating", value: "1850+ ELO" },
+        { label: "Time Control", value: "10m Rapid / 3m Blitz" }
+      ]
+    }
   ],
 
   certifications: [

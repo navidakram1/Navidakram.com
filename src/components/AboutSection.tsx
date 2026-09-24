@@ -20,13 +20,16 @@ import {
   ShieldCheck,
   CreditCard,
   Users,
-  Sparkles
+  Sparkles,
+  Gamepad2,
+  Crown
 } from "lucide-react";
 import { portfolioData } from "@/data/portfolio";
 import { VerifiedBadge } from "@/components/ui/verified-badge";
 import { HandwritingText } from "@/components/ui/handwriting-text";
 import { TechIcon } from "@/components/TechIcons";
 import { SkillsMarquee } from "@/components/ui/skills-marquee";
+import { GamingSection } from "@/components/ui/gaming-section";
 
 import { SectionTitle } from "@/components/ui/section-title";
 import { User } from "lucide-react";
@@ -362,34 +365,14 @@ export function AboutSection() {
         </div>
       </div>
 
-      {/* ================= FUN FACTS ================= */}
+      {/* ================= FUN FACTS: GAMING ================= */}
       <div className="space-y-6 pt-4">
         <h3 className="text-xl sm:text-2xl font-extrabold text-white flex items-center gap-2">
           <span className="w-2 h-6 bg-[#0084ff] rounded-full" />
-          Fun Facts
+          Fun Facts: Gaming
         </h3>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          {portfolioData.funFacts.map((fact) => {
-            const Icon = 
-              fact.icon === "Music" ? Music :
-              fact.icon === "Trophy" ? Trophy :
-              fact.icon === "Coffee" ? Coffee : Globe;
-
-            return (
-              <div
-                key={fact.label}
-                className="p-5 rounded-2xl bg-[#161722] border border-white/10 flex flex-col items-center text-center group hover:border-[#0084ff]/50 transition"
-              >
-                <div className="w-10 h-10 rounded-xl bg-[#0084ff]/10 text-[#00d2ff] flex items-center justify-center mb-2 group-hover:scale-110 transition">
-                  <Icon size={20} />
-                </div>
-                <span className="text-2xl font-black text-white">{fact.count}</span>
-                <span className="text-xs text-gray-400 font-semibold mt-1">{fact.label}</span>
-              </div>
-            );
-          })}
-        </div>
+        <GamingSection />
       </div>
 
       {/* ================= PAYMENT & STRIPE DIRECT CHECKOUT BANNER ================= */}
