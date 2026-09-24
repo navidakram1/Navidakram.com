@@ -35,6 +35,24 @@ export function ProjectsSection() {
         animatedWords={["Rabbitguy.com", "Mobile Applications.", "Web Platforms.", "SaaS Solutions."]}
       />
 
+      {/* ================= FEATURED SAAS BUILDER BANNER ================= */}
+      <div className="relative w-full rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 shadow-2xl group hover:border-[#0084ff]/50 transition-all duration-300">
+        <a 
+          href="#contact" 
+          className="block relative w-full aspect-[1024/381] bg-[#161722] overflow-hidden"
+          title="Let's Build Something - Contact Navid Akram"
+        >
+          <Image
+            src="/images/brand/saas-builder-banner.png"
+            alt="Navid Akram - I Build & Scale SaaS Products"
+            fill
+            priority
+            className="object-cover group-hover:scale-[1.015] transition-transform duration-500"
+            unoptimized
+          />
+        </a>
+      </div>
+
       {/* ================= CATEGORY FILTER TABS ================= */}
       <div className="flex items-center gap-2 flex-wrap pb-2">
         {categories.map((category) => {

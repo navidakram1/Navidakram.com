@@ -279,6 +279,42 @@ export function AboutSection() {
             </div>
           ))}
         </div>
+
+        {/* ================= PAYMENT & STRIPE DIRECT CHECKOUT BANNER ================= */}
+        <div className="relative overflow-hidden p-6 sm:p-7 rounded-3xl bg-gradient-to-r from-[#141624] via-[#1a1d30] to-[#141624] border border-white/10 hover:border-[#0084ff]/40 shadow-xl transition-all duration-300 group flex flex-col md:flex-row items-center justify-between gap-5">
+          {/* Ambient background glows */}
+          <div className="absolute -right-10 -top-10 w-44 h-44 bg-[#0084ff]/10 rounded-full blur-3xl pointer-events-none group-hover:bg-[#0084ff]/20 transition-all duration-500" />
+          <div className="absolute -left-10 -bottom-10 w-44 h-44 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="space-y-1.5 text-center md:text-left relative z-10">
+            <div className="flex items-center justify-center md:justify-start gap-2 mb-1.5">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-[11px] font-bold uppercase tracking-wider shadow-sm">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                Secure Payment
+              </span>
+              <span className="hidden sm:inline-flex items-center gap-1 text-[11px] font-semibold text-gray-400">
+                <ShieldCheck size={13} className="text-emerald-400" /> 256-bit Encrypted
+              </span>
+            </div>
+            <h4 className="text-lg sm:text-xl font-extrabold text-white tracking-tight">
+              We also accept Bank transfer & Stripe!
+            </h4>
+            <p className="text-xs sm:text-sm text-gray-300 max-w-xl leading-relaxed">
+              Instant and verified payments for projects, hourly retainer, or custom milestones.
+            </p>
+          </div>
+
+          <a
+            href="https://buy.stripe.com/6oEeYad0R3Ka4IE7sx"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative z-10 inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3.5 sm:py-4 rounded-2xl bg-gradient-to-r from-[#0084ff] to-[#0066ee] hover:from-[#0074e8] hover:to-[#0055dd] text-white font-bold text-sm tracking-wide shadow-[0_4px_25px_rgba(0,132,255,0.45)] hover:shadow-[0_6px_35px_rgba(0,132,255,0.65)] hover:scale-105 active:scale-95 transition-all duration-200 flex-shrink-0"
+          >
+            <CreditCard size={18} className="text-white" />
+            <span>Checkout Any Amount</span>
+            <ExternalLink size={14} className="text-white/80" />
+          </a>
+        </div>
       </div>
 
       {/* ================= CLIENTS ================= */}
@@ -368,30 +404,6 @@ export function AboutSection() {
         <div className="pt-2">
           <MusicPlayerCard playlistUrl={portfolioData.personal.musicPlaylistUrl} />
         </div>
-      </div>
-
-      {/* ================= PAYMENT & STRIPE DIRECT CHECKOUT BANNER ================= */}
-      <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#12131d] via-[#1a1c2b] to-[#12131d] border border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="space-y-2 text-center md:text-left">
-          <span className="px-2.5 py-1 rounded-md bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider">
-            Secure Payment
-          </span>
-          <h4 className="text-xl font-bold text-white">We also accept Bank transfer & Stripe!</h4>
-          <p className="text-sm text-gray-400">
-            Instant and verified payments for projects, hourly retainer, or custom milestones.
-          </p>
-        </div>
-
-        <a
-          href="https://buy.stripe.com/6oEeYad0R3Ka4IE7sx"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-3 px-6 py-3.5 rounded-2xl bg-[#0084ff] hover:bg-[#0070db] text-white font-bold text-sm shadow-lg shadow-[#0084ff]/30 hover:scale-105 transition-all flex-shrink-0"
-        >
-          <CreditCard size={18} />
-          <span>Checkout Any Amount</span>
-          <ExternalLink size={14} className="opacity-80" />
-        </a>
       </div>
     </div>
   );
