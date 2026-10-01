@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { RosterProvider, useRoster } from './context/RosterContext';
+import { RosterProvider } from './context/RosterContext';
 import { Sidebar } from './components/layout/Sidebar';
 import { TopBar } from './components/layout/TopBar';
 import { DashboardView } from './components/views/DashboardView';

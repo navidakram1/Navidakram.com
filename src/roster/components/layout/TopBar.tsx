@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { useRoster } from '../../context/RosterContext';
 import {
   Menu,
@@ -123,14 +124,14 @@ export const TopBar: React.FC<TopBarProps> = ({
         </button>
 
         {/* Link back to Portfolio */}
-        <a
+        <Link
           href="/"
           className="flex items-center gap-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 border border-slate-200 px-2.5 py-1.5 text-xs font-semibold text-slate-700 transition-colors"
           title="Back to navidakram.com portfolio"
         >
           <span className="hidden sm:inline text-slate-400">←</span>
           <span>navidakram.com</span>
-        </a>
+        </Link>
       </div>
     </header>
   );

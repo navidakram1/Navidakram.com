@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# navidakram.com & RosterFlow SaaS
 
-## Getting Started
+Official Next.js application for **[navidakram.com](https://navidakram.com)** featuring:
+- **Personal Portfolio & Showcase**: [navidakram.com](https://navidakram.com)
+- **RosterFlow Workforce Management SaaS**: [navidakram.com/roster](https://navidakram.com/roster)
+- **Embedded PostgreSQL & API Routes**: `/api/db` (powered by PGlite & Supabase compatibility)
 
-First, run the development server:
+---
+
+## 🚀 Live Routes
+
+| Route | Purpose | Tech |
+|---|---|---|
+| `/` | Portfolio, Projects, Articles, Interactive Resume & Contact | React 19, Tailwind CSS v4, Motion |
+| `/roster` | RosterFlow AI Shift Scheduling & Workforce Operations SaaS | Next.js App Router, PGlite, Framer Motion |
+| `/api/db` | PostgreSQL embedded database API endpoint | PGlite, Supabase-compatible schema |
+
+---
+
+## 🛠️ Local Development
 
 ```bash
+# 1. Install dependencies
+npm install
+
+# 2. Run local development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# 3. Build production bundle
+npm run build
+
+# 4. Start production server locally
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌐 Deploying to Hostinger with GitHub
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Option A: Hostinger Node.js Application (Recommended for Web / Cloud Hosting)
+1. **Connect GitHub in Hostinger**:
+   - Go to your Hostinger hPanel.
+   - Navigate to **Advanced** > **Git** or **Websites** > **Manage** > **Git**.
+   - Connect repository `navidakram1/Navidakram.com` (Branch: `main`).
+   - Deployment path: `public_html` (or your domain directory).
 
-## Learn More
+2. **Configure Node.js in Hostinger**:
+   - In hPanel, go to **Advanced** > **Node.js**.
+   - Select **Node.js version**: `20.x` or `22.x`.
+   - **Application root**: `/` (or domain path).
+   - **Application startup file**: `server.js` (a zero-config production wrapper is preconfigured in the repo root).
+   - Click **Run npm install** or run build commands in the Hostinger terminal:
+     ```bash
+     npm install
+     npm run build
+     ```
+   - Click **Restart Application**.
 
-To learn more about Next.js, take a look at the following resources:
+### Option B: Hostinger VPS / Docker
+If deploying on a Hostinger Ubuntu/Debian VPS with PM2:
+```bash
+git clone https://github.com/navidakram1/Navidakram.com.git
+cd Navidakram.com
+npm install
+npm run build
+pm2 start server.js --name "navidakram"
+pm2 save
+```
+Configure Nginx reverse proxy to forward traffic to `http://127.0.0.1:3000`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔒 Environment Variables (Optional)
+If connecting external Supabase in the future:
+```env
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+```
+If not specified, the system runs with the embedded PostgreSQL (PGlite) engine automatically without needing external credentials.
