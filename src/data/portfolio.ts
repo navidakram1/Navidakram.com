@@ -508,6 +508,14 @@ export const portfolioData = {
 
   projects: [
     {
+      id: "rosterflow",
+      title: "RosterFlow - AI Workforce & Shift Management SaaS",
+      category: "Content",
+      type: "SaaS Software",
+      image: "/images/projects/analytics-tool.jpg",
+      link: "/roster"
+    },
+    {
       id: "crypto-app",
       title: "Cryptocurrency Dashboard Application",
       category: "Content",

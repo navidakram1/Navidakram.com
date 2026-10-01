@@ -96,3 +96,34 @@ body {
 .hero-curve {
   clip-path: ellipse(150% 100% at 50% 0%);
 }
+
+/* RosterFlow Scoped Styles for /roster */
+.roster-app-scope {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+.roster-app-scope .glass-panel {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05) !important;
+  backdrop-filter: none !important;
+}
+
+.glass-panel-hover {
+  transition: all 0.2s ease-in-out;
+}
+.glass-panel-hover:hover {
+  border-color: #93c5fd;
+  box-shadow: 0 10px 25px -5px rgba(25, 67, 145, 0.08), 0 8px 10px -6px rgba(25, 67, 145, 0.04);
+  transform: translateY(-1px);
+}
+
+.glow-blue {
+  box-shadow: 0 4px 14px 0 rgba(25, 67, 145, 0.2);
+}
+
+.glow-cyan {
+  box-shadow: 0 4px 14px 0 rgba(6, 182, 212, 0.2);
+}
+

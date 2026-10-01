@@ -24,8 +24,19 @@ const nextConfig = {
       }
     ],
   },
+  serverExternalPackages: ["@electric-sql/pglite"],
   async redirects() {
     return [
+      {
+        source: "/rosterflow",
+        destination: "/roster",
+        permanent: true,
+      },
+      {
+        source: "/roster-flow",
+        destination: "/roster",
+        permanent: true,
+      },
       {
         source: "/discord",
         destination: "https://discordapp.com/users/760862401440120862",
